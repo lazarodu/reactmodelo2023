@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import { PageHome, PageLayout, PageList } from '../pages'
+import { PageAdm, PageCadastrar, PageHome, PageLayout, PageList, PageLogin } from '../pages'
+import ProtectedRoute from './ProtectedRoute'
 
 export const RouteSoftware = () => {
   return (
@@ -7,7 +8,13 @@ export const RouteSoftware = () => {
       <Route path="/" element={<PageLayout />}>
         <Route path="" element={<PageHome />} />
         <Route path="lista" element={<PageList />} />
+        <Route path="/cadastrar" element={<PageCadastrar />} />
+        <Route path="/login" element={<PageLogin />} />
+        <Route path="/adm" element={<ProtectedRoute />}>
+          <Route path="" element={<PageAdm />} />
+        </Route>
       </Route>
+
     </Routes>
   )
 }
