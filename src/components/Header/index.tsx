@@ -1,6 +1,5 @@
 import * as S from "./styles"
 import Logo from "../../assets/truck.svg"
-import { useAuth } from "../../hooks/authHook";
 import { Link, useNavigate } from "react-router-dom";
 import { GrLogout } from "react-icons/gr";
 import { useContext } from "react";
