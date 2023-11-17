@@ -7,7 +7,7 @@ export const RouteSoftware = () => {
     <Routes>
       <Route path="/" element={<PageLayout />}>
         <Route path="" element={<PageHome />} />
-        <Route path="lista" element={<PageList />} />
+        <Route path=/lista" element={<PageList />} />
         <Route path="/cadastrar" element={<PageCadastrar />} />
         <Route path="/login" element={<PageLogin />} />
         <Route path="/adm" element={<ProtectedRoute />}>
